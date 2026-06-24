@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — LongRun LED</title>
+  <link rel="stylesheet" href="CSS/contact-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><a href="index.html">Long<span>Run</span> LED</a></div>
+    <ul class="nav-links">
+      <li><a href="product.html">Products</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li>
+        <a href="contact.html" class="active">Contact Us</a>
+        <div class="dropdown">
+          <a href="#headquarters">Headquarters</a>
+          <a href="#message-form">Online Inquiry</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <span class="lang-switcher" id="langToggle">EN / 中文</span>
+      <a href="#message-form" class="btn-contact">Get a Quote</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="product.html">Products</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="contact-hero">
+  <div class="hero-content">
+    <div class="hero-breadcrumb">
+      <a href="product.html">Home</a><span>/</span><a href="contact.html">Contact Us</a>
+    </div>
+    <h1 class="hero-title">Contact Us</h1>
+    <p class="hero-sub">Get in touch with our professional team for inquiries, support, and global partnerships.</p>
+  </div>
+</section>
+
+<main class="contact-main-section" id="headquarters">
+  <div class="contact-grid-wrapper">
+    
+    <div class="contact-info-panel">
+      
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-building"></i></div>
+        <div class="info-details">
+          <h4>Global Headquarters</h4>
+          <p>4th Floor, Building 3, No. 2, Chuangye Road, Shilong Community, Shiyan Street, Bao'an District, Shenzhen, Guangdong, China</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="info-details">
+          <h4>Call Center</h4>
+          <a href="tel:+86075523318242" class="interactive-link">+86-(0755) 2331 8242</a>
+          <p>Service Hours: Mon - Sat, 9:00 AM - 6:00 PM (CST)</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="info-details">
+          <h4>Email Support</h4>
+          <a href="mailto:Info@longrunled.com" class="interactive-link">Info@longrunled.com</a>
+          <p>We typically reply within 12 hours.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-form-panel" id="message-form">
+      <h3>Request a Custom Quote</h3>
+      <p>Let us know your project requirements. Our engineering team will prepare a detailed solution.</p>
+      
+      <form class="interactive-form" id="inquiryForm">
+        <div class="form-row">
+          <div class="form-group floating-label">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Full Name</label>
+          </div>
+          <div class="form-group floating-label">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email Address</label>
+          </div>
+        </div>
+        
+        <div class="form-group floating-label">
+          <input type="text" id="company" name="company" placeholder=" ">
+          <label for="company">Company Name (Optional)</label>
+        </div>
+
+        <div class="form-group floating-label">
+          <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+          <label for="message">Project Details / Message</label>
+        </div>
+
+        <button type="submit" class="btn-submit-inquiry" id="submitBtn">
+          <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<section class="contact-map-section">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118285.55734336025!2d113.81165511394145!3d22.684534433504816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403eb8b22a57827%3A0x6e3c035661da35e6!2sBaoan%2C%20Shenzhen%2C%20Guangdong%20Province%2C%20China!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span style="display:block; text-align:center; padding: 20px; color:rgba(255,255,255,0.5); font-size:13px;">
+      Copyright &copy; 2013&ndash;2026 Shenzhen Longrun Optoelectronic Co., Ltd.
+    </span>
+  </div>
+</footer>
+
+<script src="JS/contact-script.js"></script>
+</body>
+</html>

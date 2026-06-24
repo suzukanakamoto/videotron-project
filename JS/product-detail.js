@@ -720,11 +720,11 @@ const PRODUCTS = {
     pitch: '0.93 / 1.25 / 1.56mm',
     cabinetSize: '600×337.5mm',
     imgColor: '12223e',
-    heroImg: `https://placehold.co/900x506/12223e/white?text=All-in-One+Display`,
+    heroImg: `Assets/c series 1.jpg`,
     thumbs: [
-      `https://placehold.co/160x112/12223e/white?text=AIO+1`,
-      `https://placehold.co/160x112/0d2a5e/white?text=AIO+2`,
-      `https://placehold.co/160x112/153070/white?text=AIO+3`,
+      `Assets/c series 1.jpg`,
+      `Assets/c series 2.jpg`,
+      `Assets/c series 3.jpg`,
     ],
     keyIcons: [
       { label: 'All-in-One',      icon: 'thin'     },
@@ -738,27 +738,32 @@ const PRODUCTS = {
     ],
     features: [
       {
-        title: 'Complete Conference Room Solution',
-        desc: 'Integrates LED display, media controller, audio system, and camera interface in a single slim unit. Ideal for corporate boardrooms, government agencies, command centers, and educational institutions.',
-        bullets: ['Integrated media controller', 'Optional camera interface', 'Smart whiteboard functionality'],
-        img: `https://placehold.co/600x450/12223e/white?text=Conference+Room`,
+        title: 'Features',
+        desc: 'uses Colorlight C-Series technology for its processing system, controller, and media player.',
+        bullets: ['Pitch:CH4/CH5/CH5.7/CH8/CH10', 'Common-cathode technology with energy saving by nearly 20%', 'Fast heat dissipation, low temperature rise, stable operation and long life of the screen', 'Vivid picture with a wide field of view for advertising', '3.2V+4.2V dual channel power supply, greatly save power and energy'],
+        img: `Assets/c series 2.jpg`,
       },
       {
-        title: 'Industry-Leading 0.93mm Pixel Pitch',
-        desc: 'Available in 0.93mm, 1.25mm, and 1.56mm COB pixel pitches for close-range ultra-HD viewing. Perfect for small-to-medium conference rooms where viewing distances are as close as 1.5 meters.',
-        bullets: ['0.93mm ultra-fine pitch option', 'Clear from 1.5m distance', 'True 8K resolution support'],
-        img: `https://placehold.co/600x450/0d2a5e/white?text=0.93mm+COB`,
+        title: 'Advantages of common-cathode screen',
+        desc: 'Adopt dual channel power supply tech. based on different optical characteristics of RGB LED. With smart IC control system, it distributes precise voltage to LED and driving IC saving 20 to 30% energy. (Comparing that with common-athode LED)',
+        bullets: ['Separate power supply with R/GB, accurate current distribution to lamp beads to reduce power loss.', 'Reduce temperature rise, no need for air conditioning, highly reduce input cost.', 'Uniform heat distribution with good consistency, constant color temperature, no color cast, no color blocks.'],
+        img: `Assets/c series 3.jpg`,
       },
     ],
     specs: [
-      ['Pixel Pitch', '0.93mm', '1.25mm', '1.56mm'],
-      ['Cabinet Size', '600×337.5mm (all)'],
-      ['Brightness (nits)', '600', '800', '800'],
-      ['Contrast Ratio', '≥5000:1', '≥5000:1', '≥5000:1'],
-      ['Refresh Rate', '3840Hz', '3840Hz', '3840Hz'],
-      ['Gray Scale', '16 bit', '16 bit', '16 bit'],
-      ['Viewing Angle (H/V)', '170° / 170°', '170° / 170°', '170° / 170°'],
-      ['Lifespan', '≥100,000 hrs (all)'],
+      ['Item', 'CH 4', 'CH 5', 'CH 5.7', 'CH 8', 'CH 10'],
+      ['Module Size (W×H×D) mm', '320×160×21', '320×160×21', '320×160×21', '320×160×21', '320×160×21'],
+      ['Module Resolution (W×H)', '80×40', '64 x 32', '56 x 28', '40 x 20', '32 x 16'],
+      ['Scanning Mode', '1/10', '1/8', '1/7', '1/5', '1/2'],
+      ['LED Configuration', '1R1G1B', '1R1G1B', '1R1G1B', '1R1G1B', '1R1G1B'],
+      ['LED Type', '1921 Common-cathode', '2727 Common-cathode', '2727 Common-cathode', '3535 Common-cathode', '3535 Common-cathode'],
+      ['Maintenance Method', 'Back Service', 'Back Service', 'Back Service', 'Back Service', 'Back Service'],
+      ['Installation Method', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation'],
+      ['Cabinet Size (W×H×D) mm', 'customized', 'customized', 'customized', 'customized', 'customized'],
+      ['Installation Method', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation'],
+      ['Installation Method', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation'],
+      ['Installation Method', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation'],
+      ['Installation Method', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation', 'Back Installation'],
     ],
     related: ['cv-series', 'i-board-series', 'm-series'],
   },
@@ -893,13 +898,13 @@ function renderProduct(productId) {
     </div>`).join('');
 
   // ── FULL SPEC TABLE
-  const specHeaders = ['Parameter', ...p.specs[0].slice(1).map((_, i) => `Option ${i+1}`)];
-  const pitchOptions = p.pitch.split('/').map(s => s.trim());
-  const cleanHeaders = ['Parameter', ...pitchOptions.slice(0, p.specs[0].length - 1)];
+  // const specHeaders = ['Parameter', ...p.specs[0].slice(1).map((_, i) => `Option ${i+1}`)];
+  // const pitchOptions = p.pitch.split('/').map(s => s.trim());
+  // const cleanHeaders = ['Parameter', ...pitchOptions.slice(0, p.specs[0].length - 1)];
 
-  document.getElementById('specTableHead').innerHTML =
-    (p.specs[0].length > 2 ? cleanHeaders : ['Parameter', 'Value'])
-    .map(h => `<th>${h}</th>`).join('');
+  // document.getElementById('specTableHead').innerHTML =
+  //   (p.specs[0].length > 2 ? cleanHeaders : ['Parameter', 'Value'])
+  //   .map(h => `<th>${h}</th>`).join('');
 
   document.getElementById('specTableBody').innerHTML = p.specs.map(row => `
     <tr>${row.map((cell, i) => `<td>${cell}</td>`).join('')}</tr>`).join('');

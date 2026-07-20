@@ -3,270 +3,670 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digilight Videotron</title>
-  <link rel="icon" href="Assets/icon.png" type="image/png">
+  <title>Service & Support — LongRun LED</title>
+  <meta name="description" content="LongRun LED is dedicated to providing professional service and strong support for partners through our overseas service network and service systems." />
+
+  <!-- Tautan ke file CSS eksternal -->
   <link rel="stylesheet" href="CSS/support-style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo"><a href="index.html"><img src="Assets/logo.png" alt="LongRun LED Logo"></a></div>
+<!-- ══════════════════════════
+     HEADER
+══════════════════════════ -->
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo"><img src="Assets/logo.png" alt="LongRun LED Logo">
+    </a>
 
     <ul class="nav-links">
       <li>
-        <a href="product.html">Products</a>
+        <a href="product.html">Products
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
         <div class="dropdown">
-          <a href="product.html#fine">Fine Pitch</a>
-          <a href="product.html#commercial">Retail &amp; Commercial</a>
-          <a href="product.html#rental">Rental &amp; Stage</a>
-          <a href="product.html#dooh">DOOH</a>
-          <a href="product.html#outdoor-cob">E-PRO Series Outdoor COB</a>
-          <a href="product.html#allinone">Creative All-in-One Display</a>
+          <a href="#">Fine Pitch</a>
+          <a href="#">Retail &amp; Commercial</a>
+          <a href="#">Rental &amp; Stage</a>
+          <a href="#">DOOH</a>
+          <a href="#">E-PRO Outdoor COB</a>
+          <a href="#">Creative All-in-One</a>
         </div>
       </li>
       <li>
-        <a href="cases.html">Cases</a>
+        <a href="cases.html">Cases
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
         <div class="dropdown">
-          <a href="cases.html">All Project Cases</a>
+          <a href="#">Rental &amp; Stage</a>
+          <a href="#">Indoor Fixed</a>
+          <a href="#">Outdoor Fixed</a>
+          <a href="#">Sport &amp; Gaming</a>
+          <a href="#">Command &amp; Control</a>
+          <a href="#">Transportation</a>
         </div>
       </li>
       <li>
-        <a href="support.html" class="active">Support</a>
+        <a href="support.html" class="active">Support
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
         <div class="dropdown">
-          <a href="support.html#service-system">Service Systems</a>
-          <a href="support.html#faq-section">FAQ &amp; Guides</a>
+          <a href="#page1">Overseas Service</a>
+          <a href="#page2">Service Systems</a>
+          <a href="#page3">Videos</a>
         </div>
       </li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="about.html">About Us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="#">Company Profile</a>
+          <a href="#">Company Culture</a>
+          <a href="#">Development History</a>
+          <a href="#">R&amp;D and Manufacturing</a>
+          <a href="#">Honor &amp; Certification</a>
+        </div>
+      </li>
+      <li>
+        <a href="contact.html">Contact Us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="#">Headquarters</a>
+          <a href="#">Branches</a>
+          <a href="#">Join Us</a>
+          <a href="#">Consultation</a>
+        </div>
+      </li>
     </ul>
 
     <div class="nav-actions">
-      <span class="lang-switcher" id="langToggle">EN / 中文</span>
-      <a href="contact.html" class="btn-contact">Get a Quote</a>
+      <a href="#" class="btn btn-outline">EN / 中文</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
+  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-nav-links">
-      <li><a href="index.html">Products</a></li>
-      <li><a href="cases.html">Cases</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <div class="mm-item"><a href="product.html" class="mm-trigger" style="display:flex">Products</a></div>
+    <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">Cases</a></div>
+    <div class="mm-item">
+      <button class="mm-trigger">Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="mm-panel">
+        <a href="#page1">Overseas Service</a>
+        <a href="#page2">Service Systems</a>
+        <a href="#page3">Videos</a>
+      </div>
+    </div>
+    <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">About Us</a></div>
+    <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">Contact Us</a></div>
+    <div class="mm-cta">
+      <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
+    </div>
   </div>
 </header>
 
-<section class="support-hero">
+<!-- ══════════════════════════
+     BREADCRUMB
+══════════════════════════ -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span class="current">Support</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     HERO BANNER
+══════════════════════════ -->
+<section class="page-hero">
+  <div class="hero-dots" id="heroDots"></div>
   <div class="hero-content">
-    <div class="hero-breadcrumb">
-      <a href="index.html">Home</a><span>/</span><a href="#">Support</a>
-    </div>
-    <h1 class="hero-title">Service &amp; Support</h1>
-    <p class="hero-sub">Global Technical Guarantee &amp; Professional After-Sales Engineering Network</p>
+    <div class="hero-eyebrow">Service &amp; Support</div>
+    <h1 class="hero-title">Professional Service.<br>Dedicated Support.</h1>
+    <p class="hero-sub">Dedicated to providing professional service and strong support for our partners through our global overseas service network and proven service systems.</p>
   </div>
 </section>
 
-<section class="support-channels">
-  <div class="section-container">
-    <div class="channels-grid">
-      
-      <div class="channel-card">
-        <div class="icon-box"><i class="fas fa-globe-americas"></i></div>
-        <h3>Overseas Service</h3>
-        <p>Localized technical support centers spanning multiple continents for zero-delay response.</p>
-        <span class="arrow-link">Learn More <i class="fas fa-arrow-right"></i></span>
+<!-- ══════════════════════════
+     STICKY SECTION TABS
+══════════════════════════ -->
+<div class="section-tabs">
+  <div class="section-tabs-inner">
+    <a href="#page1" class="stab active" data-section="page1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Overseas Service
+    </a>
+    <a href="#page2" class="stab" data-section="page2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Service Systems
+    </a>
+    <a href="#page3" class="stab" data-section="page3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Videos
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     PAGE 1 — OVERSEAS SERVICE
+══════════════════════════ -->
+<section class="service-section" id="page1">
+  <div class="section-wrap">
+
+    <div class="fade-up">
+      <div class="sec-eyebrow">Global Network</div>
+      <h2 class="sec-title">Overseas Service Center Roadmap</h2>
+      <p class="sec-sub">Our strategically positioned overseas service centers ensure our partners receive fast, professional, and reliable technical support no matter where they operate.</p>
+    </div>
+
+    <!-- Interactive world map -->
+    <div class="world-map-wrap fade-up">
+      <div class="world-map-title">Global Service Presence — 5+ Overseas Service Bases</div>
+
+      <div class="world-map-svg-wrap" id="worldMapWrap">
+        <!-- Simplified world SVG -->
+        <svg class="world-svg" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" aria-label="World service coverage map">
+          <!-- Ocean background -->
+          <rect width="900" height="420" fill="rgba(0,87,184,.08)" rx="12"/>
+
+          <!-- Simplified continental outlines -->
+          <!-- North America -->
+          <path d="M60 80 L180 60 L220 90 L230 130 L210 170 L190 200 L160 230 L140 250 L120 270 L100 260 L80 240 L70 210 L55 190 L50 160 L60 130 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <!-- Central America / Caribbean -->
+          <path d="M160 230 L200 240 L210 260 L190 270 L170 265 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+          <!-- South America -->
+          <path d="M170 265 L210 260 L230 290 L240 330 L230 380 L210 400 L190 410 L170 400 L155 370 L150 340 L155 300 L165 280 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+
+          <!-- Europe -->
+          <path d="M360 60 L420 50 L440 70 L450 90 L440 110 L420 120 L400 130 L380 125 L365 110 L355 90 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+          <!-- UK -->
+          <path d="M340 65 L355 58 L360 75 L348 82 Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+          <!-- Iberian Peninsula (Spain) -->
+          <path d="M340 100 L380 92 L388 115 L370 128 L345 120 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+
+          <!-- Africa -->
+          <path d="M360 140 L430 130 L460 150 L470 200 L465 260 L450 310 L430 350 L410 370 L385 365 L365 340 L350 300 L345 250 L348 200 L355 170 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+
+          <!-- Middle East -->
+          <path d="M450 120 L510 110 L530 140 L520 170 L490 180 L465 170 L455 150 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+
+          <!-- Asia (main) -->
+          <path d="M510 50 L660 40 L720 70 L740 100 L730 140 L700 170 L660 190 L620 200 L580 210 L550 200 L520 180 L505 155 L500 120 L505 90 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+          <!-- China / SE Asia -->
+          <path d="M620 160 L680 150 L720 165 L730 200 L710 230 L680 250 L650 255 L620 240 L605 215 L610 190 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <!-- Indian subcontinent -->
+          <path d="M540 170 L580 165 L600 200 L590 240 L575 270 L555 275 L540 255 L530 225 L528 195 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <!-- SE Asia peninsula -->
+          <path d="M660 240 L690 240 L700 270 L695 300 L678 305 L660 280 Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+          <!-- Japan -->
+          <ellipse cx="750" cy="130" rx="20" ry="40" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1" transform="rotate(20 750 130)"/>
+          <!-- Australia -->
+          <path d="M700 290 L780 280 L820 310 L825 360 L800 390 L760 400 L720 385 L700 355 L695 320 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+
+          <!-- Latitude lines -->
+          <line x1="0" y1="210" x2="900" y2="210" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="6 6"/>
+          <line x1="0" y1="140" x2="900" y2="140" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="6 6"/>
+          <line x1="0" y1="280" x2="900" y2="280" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="6 6"/>
+          <!-- Equator label -->
+          <text x="12" y="207" font-size="9" fill="rgba(255,255,255,.25)" font-family="system-ui">Equator</text>
+
+          <!-- Route lines (SVG, animated via CSS) -->
+          <g id="routeLines">
+            <!-- Shenzhen → USA -->
+            <path class="route-line" d="M 672 190 Q 760 90 820 105"/>
+            <!-- Shenzhen → Spain -->
+            <path class="route-line" d="M 672 190 Q 540 80 362 110" style="animation-delay:.6s"/>
+            <!-- Shenzhen → Dubai -->
+            <path class="route-line" d="M 672 190 Q 580 155 500 145" style="animation-delay:1.2s"/>
+            <!-- Shenzhen (HQ) ring -->
+            <circle cx="672" cy="190" r="8" fill="none" stroke="rgba(255,199,44,.4)" stroke-width="1.5" opacity=".7"/>
+          </g>
+
+          <!-- Service location dots (positioned on the SVG) -->
+          <!-- Shenzhen HQ -->
+          <circle cx="672" cy="190" r="6" fill="#ffc72c" opacity=".95">
+            <animate attributeName="r" values="6;10;6" dur="2.4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".95;.5;.95" dur="2.4s" repeatCount="indefinite"/>
+          </circle>
+          <text x="680" y="185" font-size="10" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Shenzhen</text>
+
+          <!-- USA -->
+          <circle cx="130" cy="150" r="5" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite" begin=".4s"/>
+          </circle>
+          <text x="138" y="145" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">USA</text>
+
+          <!-- Spain -->
+          <circle cx="362" cy="110" r="5" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="5;8;5" dur="2.6s" repeatCount="indefinite" begin=".8s"/>
+          </circle>
+          <text x="370" y="105" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Madrid</text>
+
+          <!-- Dubai -->
+          <circle cx="500" cy="148" r="5" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite" begin="1.2s"/>
+          </circle>
+          <text x="508" y="143" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Dubai</text>
+        </svg>
+      </div><!-- /svg wrap -->
+
+      <!-- Location cards below map -->
+      <div class="svc-locations-row">
+        <div class="svc-loc-card">
+          <div class="slc-flag">🇨🇳</div>
+          <div class="slc-city">Shenzhen</div>
+          <div class="slc-country">China</div>
+          <span class="slc-badge">Headquarters</span>
+        </div>
+        <div class="svc-loc-card">
+          <div class="slc-flag">🇺🇸</div>
+          <div class="slc-city">United States</div>
+          <div class="slc-country">North America</div>
+          <span class="slc-badge">Service Base</span>
+        </div>
+        <div class="svc-loc-card">
+          <div class="slc-flag">🇪🇸</div>
+          <div class="slc-city">Madrid, Spain</div>
+          <div class="slc-country">Europe</div>
+          <span class="slc-badge">Service Base</span>
+        </div>
+        <div class="svc-loc-card">
+          <div class="slc-flag">🇦🇪</div>
+          <div class="slc-city">Dubai, UAE</div>
+          <div class="slc-country">Middle East</div>
+          <span class="slc-badge">Service Base</span>
+        </div>
+      </div>
+    </div><!-- /world-map-wrap -->
+
+    <!-- Global presence numbers -->
+    <div class="global-strip fade-up">
+      <div class="gs-item">
+        <span class="gs-num" data-count="150" data-suffix="+">150+</span>
+        <span class="gs-label">Countries &amp; Regions Covered</span>
+      </div>
+      <div class="gs-item">
+        <span class="gs-num" data-count="5" data-suffix="+">5+</span>
+        <span class="gs-label">Overseas Service Bases</span>
+      </div>
+      <div class="gs-item">
+        <span class="gs-num" data-count="24" data-suffix="/7">24/7</span>
+        <span class="gs-label">Online Support Available</span>
+      </div>
+      <div class="gs-item">
+        <span class="gs-num" data-count="2" data-suffix="h">2h</span>
+        <span class="gs-label">Quick Response Commitment</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     PAGE 2 — SERVICE SYSTEMS
+══════════════════════════ -->
+<section class="service-section" id="page2" style="padding: 80px 0;">
+  <div class="svc-systems-bg"></div>
+  <div class="section-wrap">
+
+    <div class="fade-up">
+      <div class="sec-eyebrow">Service Systems</div>
+      <h2 class="sec-title">Our Service Commitment</h2>
+      <p class="sec-sub">A comprehensive service framework designed to support our partners at every stage — from pre-sales consultation to long-term after-sales care.</p>
+    </div>
+
+    <!-- 4 Main stats -->
+    <div class="svc-stats-grid fade-up">
+      <div class="svc-stat-card">
+        <div class="ssc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <span class="ssc-num">7<span class="ssc-unit">×24</span></span>
+        <div class="ssc-label">Online Service</div>
       </div>
 
-      <div class="channel-card">
-        <div class="icon-box"><i class="fas fa-file-alt"></i></div>
-        <h3>Technical Manuals</h3>
-        <p>Download comprehensive product specification sheets, user guides, and software manuals.</p>
-        <span class="arrow-link">Download Center <i class="fas fa-arrow-right"></i></span>
+      <div class="svc-stat-card">
+        <div class="ssc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
+          </svg>
+        </div>
+        <span class="ssc-num">2<span class="ssc-unit">h</span></span>
+        <div class="ssc-label">Quick Response</div>
       </div>
 
-      <div class="channel-card">
-        <div class="icon-box"><i class="fas fa-video"></i></div>
-        <h3>Video Guides</h3>
-        <p>Step-by-step visual tutorials for cabinet installation, wiring diagrams, and software setup.</p>
-        <span class="arrow-link">Watch Videos <i class="fas fa-arrow-right"></i></span>
+      <div class="svc-stat-card">
+        <div class="ssc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <span class="ssc-num">150<span class="ssc-unit">+</span></span>
+        <div class="ssc-label">Countries Covered</div>
       </div>
 
-      <div class="channel-card">
-        <div class="icon-box"><i class="fas fa-tools"></i></div>
-        <h3>Warranty Claims</h3>
-        <p>Submit component repair requests or check your long-term parts warranty matrix status.</p>
-        <span class="arrow-link">Check Status <i class="fas fa-arrow-right"></i></span>
+      <div class="svc-stat-card">
+        <div class="ssc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <span class="ssc-num">5<span class="ssc-unit">+</span></span>
+        <div class="ssc-label">Overseas Service Bases</div>
+      </div>
+    </div>
+
+    <!-- 3 service pillars -->
+    <div class="svc-pillars fade-up">
+      <div class="svc-pillar">
+        <div class="sp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 .21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92z"/>
+          </svg>
+        </div>
+        <div class="sp-body">
+          <h4>Pre-Sales Technical Support</h4>
+          <p>Expert consultation on product selection, system design, and configuration. Our engineering team helps you specify the right solution for every project requirement.</p>
+        </div>
       </div>
 
+      <div class="svc-pillar">
+        <div class="sp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div class="sp-body">
+          <h4>Installation &amp; Commissioning</h4>
+          <p>Certified technicians available for on-site installation, commissioning, and system verification worldwide — ensuring every display performs to specification from day one.</p>
+        </div>
+      </div>
+
+      <div class="svc-pillar">
+        <div class="sp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="sp-body">
+          <h4>After-Sales &amp; Warranty Support</h4>
+          <p>Comprehensive after-sales coverage including remote diagnostics, spare parts supply, and on-site repair backed by our global service network. Full warranty management for peace of mind.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     PAGE 3 — VIDEOS
+══════════════════════════ -->
+<section class="service-section alt" id="page3">
+  <div class="section-wrap">
+
+    <div class="fade-up">
+      <div class="sec-eyebrow">Video Library</div>
+      <h2 class="sec-title">Videos</h2>
+      <p class="sec-sub">Technical guides, product animations, and installation walkthroughs to help you understand and deploy our LED display solutions with confidence.</p>
+    </div>
+
+    <div class="videos-grid fade-up">
+
+      <!-- Video Card 1 -->
+      <div class="video-card" data-title="S Series Rental LED Display — 3D Animation" data-desc="Full 3D product animation showcasing the S Series rental display cabinet structure, quick-lock assembly, and configuration options." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-1">
+          <div class="vc-led-grid" id="ledGrid1"></div>
+          <span class="vc-cat">Rental &amp; Stage</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">2:34</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">Jul 09, 2024</div>
+          <div class="vc-title">S Series Rental LED Display — 3D Animation</div>
+          <div class="vc-desc">Full product animation showcasing cabinet structure, quick-lock assembly system, and stage configuration options for live event professionals.</div>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="video-card" data-title="Outdoor COB 1.98 LED Display — 3D Animation" data-desc="Detailed 3D animation of the COB E-PRO outdoor display, demonstrating the COB encapsulation, IP65 waterproof structure, and installation process." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-2">
+          <div class="vc-led-grid" id="ledGrid2"></div>
+          <span class="vc-cat">Outdoor COB</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">1:58</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">Jul 09, 2024</div>
+          <div class="vc-title">Outdoor COB 1.98 LED Display — 3D Animation</div>
+          <div class="vc-desc">Detailed animation demonstrating COB encapsulation technology, IP65 waterproof structure, and rental-ready cabinet design for outdoor events.</div>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="video-card" data-title="X Series Fixed Indoor LED Display — 3D Animation" data-desc="3D product walkthrough of the X Series commercial display, highlighting the modular panel design, front maintenance system, and installation versatility." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-3">
+          <div class="vc-led-grid" id="ledGrid3"></div>
+          <span class="vc-cat">Commercial</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">3:12</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">Jul 09, 2024</div>
+          <div class="vc-title">X Series Fixed Indoor LED Display — 3D Animation</div>
+          <div class="vc-desc">Product walkthrough highlighting the modular panel design, front maintenance system, and installation versatility for commercial environments.</div>
+        </div>
+      </div>
+
+      <!-- Video Card 4 -->
+      <div class="video-card" data-title="CV Series COB Fine Pitch — Product Overview" data-desc="Full overview of the CV Series COB ultra-fine pitch display, demonstrating the flip-chip process, ultra-high definition quality, and 16:9 seamless installation." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-4">
+          <div class="vc-led-grid" id="ledGrid4"></div>
+          <span class="vc-cat">Fine Pitch</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">4:05</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">Jun 15, 2024</div>
+          <div class="vc-title">CV Series COB Fine Pitch — Product Overview</div>
+          <div class="vc-desc">Comprehensive overview of the CV Series COB display, showcasing flip-chip technology, ultra-high definition quality, and seamless 4K/8K installation.</div>
+        </div>
+      </div>
+
+      <!-- Video Card 5 -->
+      <div class="video-card" data-title="D-PRO Series Outdoor — Front Maintenance Guide" data-desc="Step-by-step installation and front maintenance guide for the D-PRO outdoor display series, ideal for wall-mounted permanent installations." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-5">
+          <div class="vc-led-grid" id="ledGrid5"></div>
+          <span class="vc-cat">DOOH Outdoor</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">5:47</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">Jun 01, 2024</div>
+          <div class="vc-title">D-PRO Series Outdoor — Front Maintenance Guide</div>
+          <div class="vc-desc">Step-by-step installation and front maintenance guide for permanent wall-mounted outdoor LED display installations in commercial environments.</div>
+        </div>
+      </div>
+
+      <!-- Video Card 6 -->
+      <div class="video-card" data-title="Conference All-in-One — Smart Meeting Setup" data-desc="Complete setup walkthrough for the Conference All-in-One display — wireless presentation, video conferencing integration, and collaborative whiteboard configuration." onclick="openVideoModal(this)">
+        <div class="vc-thumb vc-thumb-6">
+          <div class="vc-led-grid" id="ledGrid6"></div>
+          <span class="vc-cat">Smart Meeting</span>
+          <div class="vc-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vc-duration">6:20</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-date">May 20, 2024</div>
+          <div class="vc-title">Conference All-in-One — Smart Meeting Setup</div>
+          <div class="vc-desc">Complete setup guide for wireless presentation, video conferencing integration, and collaborative whiteboard configuration in modern meeting rooms.</div>
+        </div>
+      </div>
+
+    </div><!-- /videos-grid -->
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     VIDEO MODAL
+══════════════════════════ -->
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="vm-box">
+    <button class="vm-close" onclick="closeVideoModal()" aria-label="Close video">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="vm-video-wrap">
+      <div class="vm-video-mock">
+        <div class="vm-play-big">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="vm-video-label">Click to play video</div>
+      </div>
+    </div>
+    <div class="vm-info">
+      <h3 id="vmTitle">Video Title</h3>
+      <p id="vmDesc">Video description</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     CTA BAND
+══════════════════════════ -->
+<section class="cta-band-section">
+  <div class="section-wrap">
+    <div class="cta-band fade-up">
+      <div class="cta-band-text">
+        <h3>How Can We Help You?</h3>
+        <p>Feel free to let us know your requirements. Our team will respond within 24 hours.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="contact.html?type=consultation" class="btn btn-ghost-light">Request Consultation</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="service-system-section" id="service-system">
-  <div class="section-container">
-    <div class="section-header">
-      <h2>Our Complete Service System</h2>
-      <p>Providing seamless life-cycle technical protection from initial design to operating maintenance</p>
-    </div>
-
-    <div class="tab-control-wrapper">
-      <button class="tab-trigger active" data-target="pre-sales">Pre-Sales Service</button>
-      <button class="tab-trigger" data-target="in-sales">In-Sales Service</button>
-      <button class="tab-trigger" data-target="after-sales">After-Sales Service</button>
-    </div>
-
-    <div class="tab-content-container">
-      
-      <div class="tab-panel active" id="pre-sales">
-        <div class="panel-grid">
-          <div class="panel-text">
-            <h3>Customized Solution Engineering</h3>
-            <p>Before structural integration begins, our design consultants collaborate with you to model complete CAD layouts, pixel matching, and custom structural drawings.</p>
-            <ul class="benefit-list">
-              <li><i class="fas fa-check-circle"></i> Site assessment &amp; structural load check</li>
-              <li><i class="fas fa-check-circle"></i> LED controller configuration map mapping</li>
-              <li><i class="fas fa-check-circle"></i> Luminance and power calculation models</li>
-            </ul>
-          </div>
-          <div class="panel-image">
-            <img src="https://placehold.co/600x400/0d2a5e/white?text=Pre-Sales+Engineering" alt="Pre sales design">
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="in-sales">
-        <div class="panel-grid">
-          <div class="panel-text">
-            <h3>Rigorous Manufacturing &amp; Supervision</h3>
-            <p>During the production phase, every batch undergoes component-level color tracking, multi-phase pixel aging, and drop-testing before final shipping preparation.</p>
-            <ul class="benefit-list">
-              <li><i class="fas fa-check-circle"></i> 72-hour continuous component burn-in</li>
-              <li><i class="fas fa-check-circle"></i> On-site tracking logs and visual milestone updates</li>
-              <li><i class="fas fa-check-circle"></i> Shipping and logistic tracking protection</li>
-            </ul>
-          </div>
-          <div class="panel-image">
-            <img src="https://placehold.co/600x400/102060/white?text=In-Sales+Production" alt="In sales protection">
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="after-sales">
-        <div class="panel-grid">
-          <div class="panel-text">
-            <h3>Global Engineering Support Network</h3>
-            <p>Our dedicated certified engineer team answers incoming support calls immediately and coordinates rapid part displacement pipelines worldwide.</p>
-            <ul class="benefit-list">
-              <li><i class="fas fa-check-circle"></i> 24/7 Priority remote diagnostic hotline</li>
-              <li><i class="fas fa-check-circle"></i> Module replacement and screen calibration</li>
-              <li><i class="fas fa-check-circle"></i> Regular firmware security upgrades</li>
-            </ul>
-          </div>
-          <div class="panel-image">
-            <img src="https://placehold.co/600x400/153070/white?text=After-Sales+Network" alt="After sales network">
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="faq-section" id="faq-section">
-  <div class="section-container">
-    <div class="section-header">
-      <h2>Frequently Asked Questions</h2>
-      <p>Quick technical diagnostics for common industrial hardware questions</p>
-    </div>
-
-    <div class="accordion-wrapper">
-      
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>How can I update my LED configuration software files safely?</span>
-          <i class="fas fa-chevron-down toggle-icon"></i>
-        </button>
-        <div class="accordion-body">
-          <p>You can retrieve verified configuration firmware (.rcfgx files) via our Technical Download center. Connect your master controller via USB, back up existing parameters in your control software system before uploading new system script revisions.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>What is the standard warranty period for LongRun commercial screens?</span>
-          <i class="fas fa-chevron-down toggle-icon"></i>
-        </button>
-        <div class="accordion-body">
-          <p>All catalog indoor fixed systems and outdoor DOOH structures come packed with an integrated 2-to-5 year absolute factory warranty. Extended protective SLAs can be negotiated during system configuration phases.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>How does front access maintenance tool mechanics operate?</span>
-          <i class="fas fa-chevron-down toggle-icon"></i>
-        </button>
-        <div class="accordion-body">
-          <p>Our fine pitch panels incorporate smart magnetic component layout matrix modules. Using our designated pneumatic vacuum removal handle tool, you can decouple specific system components instantly in less than 5 seconds without disturbing core panel frames.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="cta-strip">
-  <div class="cta-inner">
-    <div class="cta-text">
-      <h3>Need Urgent Field Technical Assistance?</h3>
-      <p>Contact our online emergency field dispatcher team right now for instant screen diagnostic deployment.</p>
-    </div>
-    <a href="contact.html" class="btn-cta-white">Submit Support Ticket</a>
-  </div>
-</section>
-
-<footer>
+<!-- ══════════════════════════
+     FOOTER
+══════════════════════════ -->
+<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="logo"><a href="index.html"><img src="Assets/logo 2.png" alt="LongRun LED Logo"></a></div>
-      <p>Professional LED display manufacturer focusing on Indoor COB commercial display and full-scene LED solutions.</p>
-      <div class="footer-contact">
-        <p>📞 +86-(0755) 2331 8242</p>
-        <p>✉️ Info@longrunled.com</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo"><img src="Assets/logo 2.png" alt="LongRun LED Logo">
+        </a>
+        <p>Dedicated to providing professional LED display solutions and strong technical support for partners across 150+ countries worldwide.</p>
+        <div class="footer-brand-contact">
+          <div class="fbc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 .21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92z"/></svg>
+            <span>+86-(0755) 2331 8242</span>
+          </div>
+          <div class="fbc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Info@longrunled.com</span>
+          </div>
+          <div class="fbc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Shenzhen, China</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Fine Pitch</a></li>
+          <li><a href="#">Retail &amp; Commercial</a></li>
+          <li><a href="#">Rental &amp; Stage</a></li>
+          <li><a href="#">DOOH</a></li>
+          <li><a href="#">E-PRO Outdoor COB</a></li>
+          <li><a href="#">Creative All-in-One</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Cases</h4>
+        <ul>
+          <li><a href="#">Rental &amp; Stage</a></li>
+          <li><a href="#">Indoor Fixed</a></li>
+          <li><a href="#">Outdoor Fixed</a></li>
+          <li><a href="#">Sport &amp; Gaming</a></li>
+          <li><a href="#">Command &amp; Control</a></li>
+          <li><a href="#">Transportation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#page1">Overseas Service</a></li>
+          <li><a href="#page2">Service Systems</a></li>
+          <li><a href="#page3">Videos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Development History</a></li>
+          <li><a href="#">Honor &amp; Certification</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bottom">
+      <span>Copyright © 2013–2024 Shenzhen Longrun Optoelectronic Co., Ltd.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Terms &amp; Condition</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=61558583983340" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/longrun_led/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/longrunled/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@longrunled" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08z"/></svg>
+        </a>
       </div>
     </div>
-
-    <div class="footer-col">
-      <h4>Products</h4>
-      <ul>
-        <li><a href="index.html#fine">Fine Pitch</a></li>
-        <li><a href="index.html#commercial">Retail Display</a></li>
-        <li><a href="index.html#rental">Rental Solutions</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#service-system">Service Systems</a></li>
-        <li><a href="#faq-section">FAQ Help Center</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>Copyright &copy; 2013&ndash;2026 Shenzhen Longrun Optoelectronic Co., Ltd.</span>
   </div>
 </footer>
 
+<!-- Tautan ke file JavaScript eksternal -->
 <script src="JS/support-script.js"></script>
 </body>
 </html>

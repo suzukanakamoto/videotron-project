@@ -115,7 +115,9 @@
       <p>Advanced technologies engineered to deliver exceptional image quality, energy efficiency, and long-term reliability.</p>
     </div>
 
+    <!-- Container Slider -->
     <div class="product-grid">
+      <!-- Card 1 -->
       <div class="prod-card">
         <div class="prod-img"><img src="Assets/v series - 1.jpg" alt="Fine Pitch"></div>
         <div class="prod-info">
@@ -125,6 +127,7 @@
         </div>
       </div>
       
+      <!-- Card 2 -->
       <div class="prod-card">
         <div class="prod-img"><img src="Assets/e series - 1.jpg" alt="Rental"></div>
         <div class="prod-info">
@@ -134,12 +137,43 @@
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="prod-card">
         <div class="prod-img"><img src="Assets/f series - 1.jpg" alt="DOOH"></div>
         <div class="prod-info">
-          <h3>DDOH Outdoor</h3>
+          <h3>DOOH Outdoor</h3>
           <p>High-brightness waterproof displays for digital advertising.</p>
           <a href="product.html#dooh" class="prod-link">View Range <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="prod-card">
+        <div class="prod-img"><img src="Assets/v series - 1.jpg" alt="Commercial Display"></div>
+        <div class="prod-info">
+          <h3>Commercial Display</h3>
+          <p>Sleek and high-impact digital displays for retail and corporate spaces.</p>
+          <a href="product.html#commercial" class="prod-link">View Range <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="prod-card">
+        <div class="prod-img"><img src="Assets/e series - 1.jpg" alt="Creative LED"></div>
+        <div class="prod-info">
+          <h3>Creative LED</h3>
+          <p>Flexible and customizable LED panels for unique architectural designs.</p>
+          <a href="product.html#creative" class="prod-link">View Range <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="prod-card">
+        <div class="prod-img"><img src="Assets/f series - 1.jpg" alt="All-in-One LED"></div>
+        <div class="prod-info">
+          <h3>All-in-One LED</h3>
+          <p>Integrated smart display solutions for seamless conference experiences.</p>
+          <a href="product.html#aio" class="prod-link">View Range <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -205,5 +239,44 @@
 </footer>
 
 <script src="JS/index.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.product-grid');
+    let autoSlideInterval;
+
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(() => {
+        const card = slider.querySelector('.prod-card');
+        if (!card) return;
+
+        // Menghitung jarak geser (lebar card + gap)
+        const gap = 30; // Sesuaikan dengan gap di CSS
+        const slideAmount = card.offsetWidth + gap;
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        // Jika sudah sampai paling ujung kanan, kembali ke awal (ujung kiri)
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
+        }
+      }, 3000); // 3000 ms = 3 detik
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+    };
+
+    // Jalankan auto slide pertama kali
+    startAutoSlide();
+
+    // Hentikan auto slide saat pengguna hover atau sentuh layar
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
+    slider.addEventListener('touchstart', stopAutoSlide, { passive: true });
+    slider.addEventListener('touchend', startAutoSlide, { passive: true });
+  });
+</script>
 </body>
 </html>

@@ -105,3 +105,40 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.product-grid');
+    let autoSlideInterval;
+
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(() => {
+        const card = slider.querySelector('.prod-card');
+        if (!card) return;
+
+        // Menghitung jarak geser (lebar card + gap)
+        const gap = 30; // Sesuaikan dengan gap di CSS
+        const slideAmount = card.offsetWidth + gap;
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        // Jika sudah sampai paling ujung kanan, kembali ke awal (ujung kiri)
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
+        }
+      }, 3000); // 3000 ms = 3 detik
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+    };
+
+    // Jalankan auto slide pertama kali
+    startAutoSlide();
+
+    // Hentikan auto slide saat pengguna hover atau sentuh layar
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
+    slider.addEventListener('touchstart', stopAutoSlide, { passive: true });
+    slider.addEventListener('touchend', startAutoSlide, { passive: true });
+  });

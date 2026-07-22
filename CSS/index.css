@@ -102,16 +102,6 @@ nav { max-width: 1280px; margin: 0 auto; height: 100%; display: flex; align-item
 .prod-link { font-weight: 700; color: var(--accent); display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
 .prod-card:hover .prod-link { gap: 12px; color: var(--red); }
 
-/* ══ APPLICATIONS ══ */
-.app-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.app-box { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 3/4; cursor: pointer; }
-.app-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-.app-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 25px; opacity: 0.9; transition: 0.3s; }
-.app-overlay h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 10px; transform: translateY(20px); transition: 0.3s; }
-.app-overlay a { color: var(--accent-lt); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0; transform: translateY(20px); transition: 0.3s; }
-.app-box:hover img { transform: scale(1.1); }
-.app-box:hover .app-overlay h3, .app-box:hover .app-overlay a { transform: translateY(0); opacity: 1; }
-.app-box:hover .app-overlay a { color: #fff; }
 
 /* ══ CTA STRIP ══ */
 .cta-strip { background: linear-gradient(135deg, var(--dark-navy), var(--mid-navy)); padding: 80px 0; color: #fff; text-align: center; }
@@ -198,17 +188,6 @@ footer { background: var(--dark-navy); }
   overflow-x: auto; 
   scroll-snap-type: x mandatory; 
   scroll-behavior: smooth;
-  padding: 15px 5px 25px 5px; /* Memberikan ruang agar efek hover/shadow tidak terpotong */
-  -webkit-overflow-scrolling: touch; /* Smoother scrolling di iOS */
-}
-
-/* ══ PRODUCTS SLIDER ══ */
-.product-grid { 
-  display: flex; 
-  gap: 30px; 
-  overflow-x: auto; 
-  scroll-snap-type: x mandatory; 
-  scroll-behavior: smooth;
   padding: 15px 5px 25px 5px; 
   -webkit-overflow-scrolling: touch;
 
@@ -393,5 +372,101 @@ footer { background: var(--dark-navy); }
 @media (max-width: 576px) {
   .prod-card {
     flex: 0 0 100%; 
+  }
+}
+
+/* ══ APPLICATIONS ══ */
+.app-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+.app-box { 
+  position: relative; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  aspect-ratio: 3/4; 
+  cursor: pointer; 
+}
+
+/* Container untuk menampung 2 gambar */
+.app-img-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transisi slide yang halus */
+}
+
+/* Pengaturan masing-masing gambar */
+.app-img-wrapper img { 
+  width: 100%; 
+  height: 100%; 
+  flex-shrink: 0; /* Mencegah gambar tertekan */
+  object-fit: cover; 
+}
+
+/* Overlay Teks */
+.app-overlay { 
+  position: absolute; 
+  inset: 0; 
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  padding: 25px; 
+  opacity: 0.9; 
+  transition: 0.3s; 
+  z-index: 2; /* Memastikan overlay tetap di atas gambar saat slide */
+}
+
+.app-overlay h3 { 
+  color: #fff; 
+  font-size: 20px; 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+  transform: translateY(20px); 
+  transition: 0.3s; 
+}
+
+.app-overlay a { 
+  color: var(--accent-lt); 
+  font-size: 14px; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: 0.3s; 
+}
+
+/* ══ HOVER EFFECTS ══ */
+
+/* Menggeser wrapper ke atas sejauh tinggi 1 gambar (100%) */
+.app-box:hover .app-img-wrapper { 
+  transform: translateY(-100%); 
+}
+
+.app-box:hover .app-overlay h3, 
+.app-box:hover .app-overlay a { 
+  transform: translateY(0); 
+  opacity: 1; 
+}
+
+.app-box:hover .app-overlay a { 
+  color: #fff; 
+}
+
+/* Media Query Responsif */
+@media (max-width: 992px) {
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .app-grid {
+    grid-template-columns: 1fr;
   }
 }

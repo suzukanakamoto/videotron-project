@@ -149,7 +149,7 @@
 
       <!-- Card 4 -->
       <div class="prod-card">
-        <div class="prod-img"><img src="Assets/v series - 1.jpg" alt="Commercial Display"></div>
+        <div class="prod-img"><img src="https://i0.wp.com/operationrainfall.com/wp-content/uploads/2019/05/Non-Non-Biyori-cast3.jpg?ssl=1" alt="Commercial Display"></div>
         <div class="prod-info">
           <h3>Commercial Display</h3>
           <p>Sleek and high-impact digital displays for retail and corporate spaces.</p>
@@ -159,7 +159,7 @@
 
       <!-- Card 5 -->
       <div class="prod-card">
-        <div class="prod-img"><img src="Assets/e series - 1.jpg" alt="Creative LED"></div>
+        <div class="prod-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_F9DjxRHA8BAi2c_czKOIX_IuYDDcFIz7qPWtj9HrytnnkYcQuDxUqE&s=10" alt="Creative LED"></div>
         <div class="prod-info">
           <h3>Creative LED</h3>
           <p>Flexible and customizable LED panels for unique architectural designs.</p>
@@ -169,7 +169,7 @@
 
       <!-- Card 6 -->
       <div class="prod-card">
-        <div class="prod-img"><img src="Assets/f series - 1.jpg" alt="All-in-One LED"></div>
+        <div class="prod-img"><img src="https://image.idntimes.com/post/20240420/non-non-biyori-characters-eating-watermelon-5912c0e5c62dc8bd055c353c53a3159f-29200f4fb88ea73b6831d514ec903334.jpg" alt="All-in-One LED"></div>
         <div class="prod-info">
           <h3>All-in-One LED</h3>
           <p>Integrated smart display solutions for seamless conference experiences.</p>
@@ -188,29 +188,48 @@
     </div>
 
     <div class="app-grid">
+      <!-- Card 1 -->
       <div class="app-box">
-        <img src="Assets/outdoor result - 1.jpg" alt="Control Room">
+        <div class="app-img-wrapper">
+          <img src="Assets/outdoor result - 1.jpg" alt="Commercial Display 1">
+          <img src="https://static.wikia.nocookie.net/aobuta/images/d/d8/Mai_Sakurajima_Anime_-_Screenshot_1.png/revision/latest?cb=20260115000637" alt="Commercial Display 2"> <!-- Gambar Kedua -->
+        </div>
         <div class="app-overlay">
           <h3>Commercial Display</h3>
           <a href="cases.html">See Cases</a>
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="app-box">
-        <img src="Assets/government result - 1.jpg" alt="Retail">
+        <div class="app-img-wrapper">
+          <img src="Assets/government result - 1.jpg" alt="Government 1">
+          <img src="https://i.pinimg.com/736x/13/fd/56/13fd5677c654c1f840866013135191f6.jpg" alt="Government 2"> <!-- Gambar Kedua -->
+        </div>
         <div class="app-overlay">
           <h3>Government & Smart City</h3>
           <a href="cases.html">See Cases</a>
         </div>
       </div>
+
+      <!-- Card 3 -->
       <div class="app-box">
-        <img src="Assets/retail result - 1.jpg" alt="Retail">
+        <div class="app-img-wrapper">
+          <img src="Assets/retail result - 1.jpg" alt="Retail 1">
+          <img src="https://otakotaku.com/asset/img/character/2018/07/rio-futaba-5b5d1235820c3p.jpg" alt="Retail 2"> <!-- Gambar Kedua -->
+        </div>
         <div class="app-overlay">
           <h3>Retail</h3>
           <a href="cases.html">See Cases</a>
         </div>
       </div>
+
+      <!-- Card 4 -->
       <div class="app-box">
-        <img src="Assets/meeting result - 1.jpg" alt="XR Studio">
+        <div class="app-img-wrapper">
+          <img src="Assets/meeting result - 1.jpg" alt="Smart Meeting 1">
+          <img src="https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=500,q=85/model_showcase/0/866ead74-7700-2ca6-37af-6f807ef09fbc.jpg"> <!-- Gambar Kedua -->
+        </div>
         <div class="app-overlay">
           <h3>Smart Meeting</h3>
           <a href="cases.html">See Cases</a>
@@ -239,44 +258,5 @@
 </footer>
 
 <script src="JS/index.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector('.product-grid');
-    let autoSlideInterval;
-
-    const startAutoSlide = () => {
-      autoSlideInterval = setInterval(() => {
-        const card = slider.querySelector('.prod-card');
-        if (!card) return;
-
-        // Menghitung jarak geser (lebar card + gap)
-        const gap = 30; // Sesuaikan dengan gap di CSS
-        const slideAmount = card.offsetWidth + gap;
-        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-
-        // Jika sudah sampai paling ujung kanan, kembali ke awal (ujung kiri)
-        if (slider.scrollLeft >= maxScrollLeft - 10) {
-          slider.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
-        }
-      }, 3000); // 3000 ms = 3 detik
-    };
-
-    const stopAutoSlide = () => {
-      clearInterval(autoSlideInterval);
-    };
-
-    // Jalankan auto slide pertama kali
-    startAutoSlide();
-
-    // Hentikan auto slide saat pengguna hover atau sentuh layar
-    slider.addEventListener('mouseenter', stopAutoSlide);
-    slider.addEventListener('mouseleave', startAutoSlide);
-    slider.addEventListener('touchstart', stopAutoSlide, { passive: true });
-    slider.addEventListener('touchend', startAutoSlide, { passive: true });
-  });
-</script>
 </body>
 </html>

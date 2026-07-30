@@ -266,7 +266,7 @@ ul    { list-style: none; }
 
 .world-map-svg-wrap {
   position: relative; z-index: 1;
-  aspect-ratio: 2.4/1;
+  aspect-ratio: 960/440;
   overflow: hidden;
 }
 
@@ -312,10 +312,10 @@ ul    { list-style: none; }
 .route-line { stroke: rgba(255,199,44,.3); stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; animation: dashFlow 3s linear infinite; }
 @keyframes dashFlow { to { stroke-dashoffset: -100; } }
 
-/* Pinpoint cards row */
+/* Pinpoint cards row — 6 kota Indonesia (3 × 2) */
 .svc-locations-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 32px;
   position: relative; z-index: 1;
@@ -678,6 +678,24 @@ ul    { list-style: none; }
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════ */
+/* ── Map city tooltip on hover ── */
+.map-city-tooltip {
+  position: absolute;
+  background: rgba(10,22,40,.9);
+  border: 1px solid rgba(255,199,44,.4);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffc72c;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 20;
+  transform: translate(-50%, -130%);
+  display: none;
+}
+.world-map-svg-wrap:hover .map-city-tooltip { display: block; }
+
 @media (max-width: 1100px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
@@ -689,7 +707,7 @@ ul    { list-style: none; }
   .svc-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .svc-pillars { grid-template-columns: 1fr; }
   .global-strip { grid-template-columns: repeat(2, 1fr); }
-  .svc-locations-row { grid-template-columns: repeat(2, 1fr); }
+  .svc-locations-row { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 768px) {
   .page-hero { height: 240px; }
@@ -700,9 +718,13 @@ ul    { list-style: none; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .world-map-wrap { padding: 28px 16px 24px; }
   .svc-stats-grid { grid-template-columns: 1fr 1fr; }
+  .svc-locations-row { grid-template-columns: repeat(2, 1fr); }
+  /* Peta Indonesia: hide beberapa label teks di layar kecil supaya tidak tumpang tindih */
+  .world-svg text { font-size: 7.5px; }
 }
 @media (max-width: 560px) {
   .global-strip { grid-template-columns: 1fr 1fr; }
   .videos-grid { grid-template-columns: 1fr; }
   .svc-locations-row { grid-template-columns: 1fr 1fr; }
+  .world-map-svg-wrap { aspect-ratio: 960/480; }
 }

@@ -162,148 +162,331 @@
   <div class="section-wrap">
 
     <div class="fade-up">
-      <div class="sec-eyebrow">Global Network</div>
-      <h2 class="sec-title">Overseas Service Center Roadmap</h2>
-      <p class="sec-sub">Our strategically positioned overseas service centers ensure our partners receive fast, professional, and reliable technical support no matter where they operate.</p>
+      <div class="sec-eyebrow">Jaringan Nasional</div>
+      <h2 class="sec-title">Persebaran Layanan di Seluruh Indonesia</h2>
+      <p class="sec-sub">Tim teknis kami tersebar di kota-kota besar di seluruh Indonesia untuk memberikan layanan konsultasi, instalasi, dan purna jual yang cepat dan profesional.</p>
     </div>
 
-    <!-- Interactive world map -->
+    <!-- Indonesia Map -->
     <div class="world-map-wrap fade-up">
-      <div class="world-map-title">Global Service Presence — 5+ Overseas Service Bases</div>
+      <div class="world-map-title">Cakupan Layanan Nasional — 300+ Kota &amp; Kabupaten</div>
 
       <div class="world-map-svg-wrap" id="worldMapWrap">
-        <!-- Simplified world SVG -->
-        <svg class="world-svg" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" aria-label="World service coverage map">
-          <!-- Ocean background -->
-          <rect width="900" height="420" fill="rgba(0,87,184,.08)" rx="12"/>
+        <svg class="world-svg" viewBox="0 0 960 440" img src="id.svg" aria-label="Peta Indonesia sebaran layanan">
 
-          <!-- Simplified continental outlines -->
-          <!-- North America -->
-          <path d="M60 80 L180 60 L220 90 L230 130 L210 170 L190 200 L160 230 L140 250 L120 270 L100 260 L80 240 L70 210 L55 190 L50 160 L60 130 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-          <!-- Central America / Caribbean -->
-          <path d="M160 230 L200 240 L210 260 L190 270 L170 265 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
-          <!-- South America -->
-          <path d="M170 265 L210 260 L230 290 L240 330 L230 380 L210 400 L190 410 L170 400 L155 370 L150 340 L155 300 L165 280 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <!-- ── Ocean / background ── -->
+          <defs>
+            <radialGradient id="seaGrad" cx="50%" cy="50%" r="70%">
+              <stop offset="0%" stop-color="rgba(0,87,184,.18)"/>
+              <stop offset="100%" stop-color="rgba(0,40,100,.08)"/>
+            </radialGradient>
+            <filter id="islandGlow">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <rect width="960" height="440" fill="url(#seaGrad)" rx="14"/>
 
-          <!-- Europe -->
-          <path d="M360 60 L420 50 L440 70 L450 90 L440 110 L420 120 L400 130 L380 125 L365 110 L355 90 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
-          <!-- UK -->
-          <path d="M340 65 L355 58 L360 75 L348 82 Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-          <!-- Iberian Peninsula (Spain) -->
-          <path d="M340 100 L380 92 L388 115 L370 128 L345 120 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
-
-          <!-- Africa -->
-          <path d="M360 140 L430 130 L460 150 L470 200 L465 260 L450 310 L430 350 L410 370 L385 365 L365 340 L350 300 L345 250 L348 200 L355 170 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-
-          <!-- Middle East -->
-          <path d="M450 120 L510 110 L530 140 L520 170 L490 180 L465 170 L455 150 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-
-          <!-- Asia (main) -->
-          <path d="M510 50 L660 40 L720 70 L740 100 L730 140 L700 170 L660 190 L620 200 L580 210 L550 200 L520 180 L505 155 L500 120 L505 90 Z" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
-          <!-- China / SE Asia -->
-          <path d="M620 160 L680 150 L720 165 L730 200 L710 230 L680 250 L650 255 L620 240 L605 215 L610 190 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-          <!-- Indian subcontinent -->
-          <path d="M540 170 L580 165 L600 200 L590 240 L575 270 L555 275 L540 255 L530 225 L528 195 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-          <!-- SE Asia peninsula -->
-          <path d="M660 240 L690 240 L700 270 L695 300 L678 305 L660 280 Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-          <!-- Japan -->
-          <ellipse cx="750" cy="130" rx="20" ry="40" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.15)" stroke-width="1" transform="rotate(20 750 130)"/>
-          <!-- Australia -->
-          <path d="M700 290 L780 280 L820 310 L825 360 L800 390 L760 400 L720 385 L700 355 L695 320 Z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-
+          <!-- ── Grid lines (latitude/longitude) ── -->
+          <!-- Longitude lines -->
+          <line x1="180" y1="0" x2="180" y2="440" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
+          <line x1="340" y1="0" x2="340" y2="440" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
+          <line x1="500" y1="0" x2="500" y2="440" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
+          <line x1="660" y1="0" x2="660" y2="440" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
+          <line x1="820" y1="0" x2="820" y2="440" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
           <!-- Latitude lines -->
-          <line x1="0" y1="210" x2="900" y2="210" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="6 6"/>
-          <line x1="0" y1="140" x2="900" y2="140" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="6 6"/>
-          <line x1="0" y1="280" x2="900" y2="280" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="6 6"/>
+          <line x1="0" y1="140" x2="960" y2="140" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
+          <line x1="0" y1="220" x2="960" y2="220" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="8 4"/>
+          <line x1="0" y1="300" x2="960" y2="300" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="5 5"/>
           <!-- Equator label -->
-          <text x="12" y="207" font-size="9" fill="rgba(255,255,255,.25)" font-family="system-ui">Equator</text>
+          <text x="10" y="217" font-size="8.5" fill="rgba(255,255,255,.3)" font-family="system-ui" font-weight="600">— Khatulistiwa</text>
 
-          <!-- Route lines (SVG, animated via CSS) -->
-          <g id="routeLines">
-            <!-- Shenzhen → USA -->
-            <path class="route-line" d="M 672 190 Q 760 90 820 105"/>
-            <!-- Shenzhen → Spain -->
-            <path class="route-line" d="M 672 190 Q 540 80 362 110" style="animation-delay:.6s"/>
-            <!-- Shenzhen → Dubai -->
-            <path class="route-line" d="M 672 190 Q 580 155 500 145" style="animation-delay:1.2s"/>
-            <!-- Shenzhen (HQ) ring -->
-            <circle cx="672" cy="190" r="8" fill="none" stroke="rgba(255,199,44,.4)" stroke-width="1.5" opacity=".7"/>
+          <!-- ════════════════════════
+               PULAU-PULAU INDONESIA
+               (path per pulau utama)
+               ════════════════════════ -->
+
+          <!-- ══ SUMATERA ══ -->
+          <!-- Aceh (ujung utara Sumatera) -->
+          <path d="M52 115 L80 95 L100 88 L118 92 L125 105 L118 118 L105 125 L88 122 L70 128 L60 122 Z"
+                fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.32)" stroke-width="1.4" stroke-linejoin="round"/>
+          <!-- Badan Sumatera -->
+          <path d="M90 118 L125 105 L160 100 L195 108 L220 122 L238 140 L248 162 L252 188 L248 215 L238 242 L224 268 L208 290 L190 310 L172 325 L155 335 L140 340 L126 338 L114 330 L104 318 L96 302 L90 284 L86 264 L84 242 L84 218 L86 194 L88 170 L88 145 Z"
+                fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.32)" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Kepulauan Riau & Bangka-Belitung (pulau kecil sekitar selat Malaka) -->
+          <ellipse cx="228" cy="280" rx="16" ry="8" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+          <ellipse cx="258" cy="268" rx="11" ry="7" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+
+          <!-- ══ JAWA ══ -->
+          <path d="M195 310 L230 305 L270 302 L318 300 L370 298 L420 296 L465 296 L508 298 L540 302 L560 308 L568 318 L558 328 L535 335 L502 338 L465 338 L428 336 L390 334 L348 332 L308 330 L268 328 L232 326 L210 322 L198 316 Z"
+                fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.34)" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Madura -->
+          <ellipse cx="502" cy="292" rx="22" ry="7" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1" transform="rotate(-5 502 292)"/>
+
+          <!-- ══ BALI ══ -->
+          <ellipse cx="590" cy="316" rx="18" ry="11" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.32)" stroke-width="1.3"/>
+
+          <!-- ══ NUSA TENGGARA (Lombok, Sumbawa, Flores, Timor) ══ -->
+          <ellipse cx="624" cy="322" rx="14" ry="9"  fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/>
+          <path d="M646 318 L695 314 L715 322 L710 332 L688 336 L660 332 L648 326 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M720 320 L770 316 L790 324 L785 335 L762 340 L735 336 L722 328 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- Timor -->
+          <path d="M800 330 L848 322 L868 330 L862 345 L840 352 L815 348 L802 340 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-linejoin="round"/>
+
+          <!-- ══ KALIMANTAN ══ -->
+          <path d="M300 165 L340 152 L390 145 L440 142 L490 144 L535 150 L570 162 L592 178 L605 198 L608 220 L605 244 L594 265 L578 282 L558 296 L535 305 L508 308 L480 308 L452 305 L424 298 L396 288 L368 274 L344 256 L325 236 L310 214 L300 190 L296 172 Z"
+                fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.32)" stroke-width="1.5" stroke-linejoin="round"/>
+
+          <!-- ══ SULAWESI ══ -->
+          <!-- Lengan utara -->
+          <path d="M648 148 L680 136 L712 130 L732 138 L728 152 L710 162 L690 168 L670 164 Z"
+                fill="rgba(255,255,255,.11)" stroke="rgba(255,255,255,.28)" stroke-width="1.3" stroke-linejoin="round"/>
+          <!-- Badan tengah -->
+          <path d="M648 148 L660 164 L655 188 L648 212 L640 235 L632 256 L622 274 L610 288 L602 298 L594 302 L588 295 L590 278 L598 260 L608 238 L616 215 L620 190 L622 165 L632 148 Z"
+                fill="rgba(255,255,255,.11)" stroke="rgba(255,255,255,.28)" stroke-width="1.3" stroke-linejoin="round"/>
+          <!-- Lengan Tenggara -->
+          <path d="M622 274 L645 268 L665 272 L680 286 L678 302 L665 312 L648 310 L635 298 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- Lengan Timur (Kendari) -->
+          <path d="M638 248 L665 240 L688 245 L700 260 L694 275 L678 280 L660 275 L645 262 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-linejoin="round"/>
+
+          <!-- ══ MALUKU ══ -->
+          <ellipse cx="758" cy="220" rx="10" ry="16" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.22)" stroke-width="1.1"/>
+          <ellipse cx="782" cy="240" rx="8"  ry="13" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.22)" stroke-width="1.1"/>
+          <ellipse cx="806" cy="210" rx="7"  ry="12" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.22)" stroke-width="1.1"/>
+          <ellipse cx="828" cy="228" rx="9"  ry="6"  fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)"  stroke-width="1"/>
+
+          <!-- ══ PAPUA ══ -->
+          <path d="M820 158 L870 148 L910 150 L940 162 L952 180 L950 202 L940 225 L924 245 L902 260 L878 270 L852 272 L828 268 L808 258 L795 242 L790 222 L792 202 L800 182 L810 168 Z"
+                fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.32)" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Papua Barat / ujung kepala burung -->
+          <path d="M795 180 L808 168 L800 182 L790 198 Z"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+
+          <!-- ════════════════════════
+               KONEKSI ANTAR KOTA (dashed routes)
+               ════════════════════════ -->
+          <g opacity=".5">
+            <!-- Jakarta → Surabaya -->
+            <path class="route-line" d="M 340 318 Q 420 305 480 318" style="animation-delay:0s"/>
+            <!-- Jakarta → Medan -->
+            <path class="route-line" d="M 340 318 Q 240 270 145 220" style="animation-delay:.5s"/>
+            <!-- Jakarta → Makassar -->
+            <path class="route-line" d="M 340 318 Q 480 280 620 260" style="animation-delay:1s"/>
+            <!-- Surabaya → Makassar -->
+            <path class="route-line" d="M 480 318 Q 550 285 620 260" style="animation-delay:1.5s"/>
+            <!-- Makassar → Jayapura -->
+            <path class="route-line" d="M 620 260 Q 740 235 892 198" style="animation-delay:2s"/>
+            <!-- Surabaya → Denpasar -->
+            <path class="route-line" d="M 480 318 Q 535 315 590 316" style="animation-delay:.8s"/>
+            <!-- Jakarta → Palembang -->
+            <path class="route-line" d="M 340 318 Q 270 308 210 295" style="animation-delay:.3s"/>
+            <!-- Balikpapan → Makassar -->
+            <path class="route-line" d="M 505 252 Q 560 255 620 260" style="animation-delay:1.2s"/>
+            <!-- Jakarta → Balikpapan -->
+            <path class="route-line" d="M 340 318 Q 420 280 505 252" style="animation-delay:.6s"/>
           </g>
 
-          <!-- Service location dots (positioned on the SVG) -->
-          <!-- Shenzhen HQ -->
-          <circle cx="672" cy="190" r="6" fill="#ffc72c" opacity=".95">
-            <animate attributeName="r" values="6;10;6" dur="2.4s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values=".95;.5;.95" dur="2.4s" repeatCount="indefinite"/>
-          </circle>
-          <text x="680" y="185" font-size="10" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Shenzhen</text>
+          <!-- ════════════════════════
+               TITIK-TITIK KOTA
+               ════════════════════════ -->
 
-          <!-- USA -->
-          <circle cx="130" cy="150" r="5" fill="#ffc72c" opacity=".9">
-            <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite" begin=".4s"/>
+          <!-- ── JAKARTA (Pusat / HQ) ── -->
+          <circle cx="340" cy="318" r="9" fill="#ffc72c" opacity=".95">
+            <animate attributeName="r" values="9;14;9" dur="2.2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".95;.5;.95" dur="2.2s" repeatCount="indefinite"/>
           </circle>
-          <text x="138" y="145" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">USA</text>
+          <circle cx="340" cy="318" r="14" fill="none" stroke="rgba(255,199,44,.35)" stroke-width="1.5">
+            <animate attributeName="r" values="14;22;14" dur="2.2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".5;0;.5" dur="2.2s" repeatCount="indefinite"/>
+          </circle>
+          <rect x="352" y="305" width="62" height="20" rx="5" fill="rgba(10,22,40,.75)"/>
+          <text x="356" y="319" font-size="10" font-weight="800" fill="#ffc72c" font-family="system-ui">Jakarta ★</text>
 
-          <!-- Spain -->
-          <circle cx="362" cy="110" r="5" fill="#ffc72c" opacity=".9">
-            <animate attributeName="r" values="5;8;5" dur="2.6s" repeatCount="indefinite" begin=".8s"/>
+          <!-- ── SURABAYA ── -->
+          <circle cx="480" cy="318" r="6" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="6;10;6" dur="2.6s" repeatCount="indefinite" begin=".4s"/>
           </circle>
-          <text x="370" y="105" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Madrid</text>
+          <rect x="490" y="308" width="60" height="18" rx="4" fill="rgba(10,22,40,.7)"/>
+          <text x="494" y="321" font-size="9.5" font-weight="700" fill="rgba(255,255,255,.95)" font-family="system-ui">Surabaya</text>
 
-          <!-- Dubai -->
-          <circle cx="500" cy="148" r="5" fill="#ffc72c" opacity=".9">
-            <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite" begin="1.2s"/>
+          <!-- ── MEDAN ── -->
+          <circle cx="145" cy="220" r="6" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="6;10;6" dur="2.8s" repeatCount="indefinite" begin=".2s"/>
           </circle>
-          <text x="508" y="143" font-size="9" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Dubai</text>
+          <rect x="155" y="210" width="48" height="18" rx="4" fill="rgba(10,22,40,.7)"/>
+          <text x="159" y="223" font-size="9.5" font-weight="700" fill="rgba(255,255,255,.95)" font-family="system-ui">Medan</text>
+
+          <!-- ── BANDUNG ── -->
+          <circle cx="362" cy="328" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.4s" repeatCount="indefinite" begin=".7s"/>
+          </circle>
+          <rect x="370" y="320" width="56" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="374" y="332" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Bandung</text>
+
+          <!-- ── SEMARANG ── -->
+          <circle cx="430" cy="316" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite" begin=".9s"/>
+          </circle>
+          <rect x="440" y="306" width="62" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="444" y="319" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Semarang</text>
+
+          <!-- ── PALEMBANG ── -->
+          <circle cx="210" cy="295" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.7s" repeatCount="indefinite" begin=".5s"/>
+          </circle>
+          <rect x="218" y="285" width="66" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="222" y="298" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Palembang</text>
+
+          <!-- ── MAKASSAR ── -->
+          <circle cx="620" cy="260" r="6" fill="#ffc72c" opacity=".9">
+            <animate attributeName="r" values="6;10;6" dur="2.6s" repeatCount="indefinite" begin="1s"/>
+          </circle>
+          <rect x="628" y="250" width="62" height="18" rx="4" fill="rgba(10,22,40,.7)"/>
+          <text x="632" y="263" font-size="9.5" font-weight="700" fill="rgba(255,255,255,.95)" font-family="system-ui">Makassar</text>
+
+          <!-- ── BALIKPAPAN ── -->
+          <circle cx="505" cy="252" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite" begin=".6s"/>
+          </circle>
+          <rect x="514" y="240" width="68" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="518" y="253" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Balikpapan</text>
+
+          <!-- ── DENPASAR ── -->
+          <circle cx="590" cy="320" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.4s" repeatCount="indefinite" begin="1.2s"/>
+          </circle>
+          <rect x="596" y="328" width="62" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="600" y="341" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Denpasar</text>
+
+          <!-- ── MANADO ── -->
+          <circle cx="712" cy="148" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.6s" repeatCount="indefinite" begin="1.4s"/>
+          </circle>
+          <rect x="720" y="138" width="52" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="724" y="151" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Manado</text>
+
+          <!-- ── PONTIANAK ── -->
+          <circle cx="385" cy="200" r="5" fill="#ffc72c" opacity=".85">
+            <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite" begin=".3s"/>
+          </circle>
+          <rect x="394" y="190" width="62" height="16" rx="4" fill="rgba(10,22,40,.6)"/>
+          <text x="398" y="203" font-size="9" font-weight="700" fill="rgba(255,255,255,.88)" font-family="system-ui">Pontianak</text>
+
+          <!-- ── JAYAPURA ── -->
+          <circle cx="892" cy="198" r="5" fill="#ffc72c" opacity=".88">
+            <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite" begin="1.8s"/>
+          </circle>
+          <rect x="830" y="188" width="58" height="16" rx="4" fill="rgba(10,22,40,.65)"/>
+          <text x="834" y="201" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)" font-family="system-ui">Jayapura</text>
+
+          <!-- ── YOGYAKARTA ── -->
+          <circle cx="428" cy="328" r="4.5" fill="#ffc72c" opacity=".85">
+            <animate attributeName="r" values="4.5;7;4.5" dur="2.7s" repeatCount="indefinite" begin="1.1s"/>
+          </circle>
+          <rect x="400" y="338" width="72" height="15" rx="4" fill="rgba(10,22,40,.6)"/>
+          <text x="403" y="350" font-size="8.5" font-weight="700" fill="rgba(255,255,255,.88)" font-family="system-ui">Yogyakarta</text>
+
+          <!-- ── PEKANBARU ── -->
+          <circle cx="175" cy="255" r="4.5" fill="#ffc72c" opacity=".82">
+            <animate attributeName="r" values="4.5;7;4.5" dur="2.9s" repeatCount="indefinite" begin=".8s"/>
+          </circle>
+          <rect x="182" y="245" width="65" height="15" rx="4" fill="rgba(10,22,40,.6)"/>
+          <text x="186" y="258" font-size="8.5" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Pekanbaru</text>
+
+          <!-- ── SAMARINDA ── -->
+          <circle cx="530" cy="224" r="4.5" fill="#ffc72c" opacity=".82">
+            <animate attributeName="r" values="4.5;7;4.5" dur="2.7s" repeatCount="indefinite" begin="1.6s"/>
+          </circle>
+          <rect x="538" y="213" width="62" height="15" rx="4" fill="rgba(10,22,40,.6)"/>
+          <text x="542" y="226" font-size="8.5" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Samarinda</text>
+
+          <!-- ── KUPANG ── -->
+          <circle cx="762" cy="338" r="4.5" fill="#ffc72c" opacity=".82">
+            <animate attributeName="r" values="4.5;7;4.5" dur="2.6s" repeatCount="indefinite" begin="2.1s"/>
+          </circle>
+          <rect x="768" y="327" width="50" height="15" rx="4" fill="rgba(10,22,40,.6)"/>
+          <text x="772" y="340" font-size="8.5" font-weight="700" fill="rgba(255,255,255,.85)" font-family="system-ui">Kupang</text>
+
+          <!-- ── Ambon ── -->
+          <circle cx="758" cy="248" r="4" fill="#ffc72c" opacity=".78">
+            <animate attributeName="r" values="4;6.5;4" dur="2.8s" repeatCount="indefinite" begin="2.4s"/>
+          </circle>
+          <rect x="764" y="238" width="45" height="14" rx="3" fill="rgba(10,22,40,.55)"/>
+          <text x="767" y="250" font-size="8" font-weight="700" fill="rgba(255,255,255,.82)" font-family="system-ui">Ambon</text>
+
+          <!-- Legend -->
+          <rect x="12" y="390" width="200" height="36" rx="7" fill="rgba(10,22,40,.65)"/>
+          <circle cx="28" cy="408" r="5" fill="#ffc72c" opacity=".95"/>
+          <text x="38" y="412" font-size="9" fill="rgba(255,255,255,.85)" font-family="system-ui" font-weight="600">Pusat / Kota Besar</text>
+          <circle cx="115" cy="408" r="4" fill="#ffc72c" opacity=".75"/>
+          <text x="124" y="412" font-size="9" fill="rgba(255,255,255,.7)" font-family="system-ui">Kota Layanan</text>
+
         </svg>
       </div><!-- /svg wrap -->
 
-      <!-- Location cards below map -->
-      <div class="svc-locations-row">
+      <!-- Location cards below map — 6 wilayah utama -->
+      <div class="svc-locations-row" style="grid-template-columns: repeat(3, 1fr);">
         <div class="svc-loc-card">
-          <div class="slc-flag">🇨🇳</div>
-          <div class="slc-city">Shenzhen</div>
-          <div class="slc-country">China</div>
+          <div class="slc-flag">🏙️</div>
+          <div class="slc-city">Jakarta</div>
+          <div class="slc-country">DKI Jakarta — Kantor Pusat</div>
           <span class="slc-badge">Headquarters</span>
         </div>
         <div class="svc-loc-card">
-          <div class="slc-flag">🇺🇸</div>
-          <div class="slc-city">United States</div>
-          <div class="slc-country">North America</div>
-          <span class="slc-badge">Service Base</span>
+          <div class="slc-flag">🌴</div>
+          <div class="slc-city">Surabaya</div>
+          <div class="slc-country">Jawa Timur</div>
+          <span class="slc-badge">Service Center</span>
         </div>
         <div class="svc-loc-card">
-          <div class="slc-flag">🇪🇸</div>
-          <div class="slc-city">Madrid, Spain</div>
-          <div class="slc-country">Europe</div>
-          <span class="slc-badge">Service Base</span>
+          <div class="slc-flag">🌋</div>
+          <div class="slc-city">Medan</div>
+          <div class="slc-country">Sumatera Utara</div>
+          <span class="slc-badge">Service Center</span>
         </div>
         <div class="svc-loc-card">
-          <div class="slc-flag">🇦🇪</div>
-          <div class="slc-city">Dubai, UAE</div>
-          <div class="slc-country">Middle East</div>
-          <span class="slc-badge">Service Base</span>
+          <div class="slc-flag">🌊</div>
+          <div class="slc-city">Makassar</div>
+          <div class="slc-country">Sulawesi Selatan</div>
+          <span class="slc-badge">Service Center</span>
+        </div>
+        <div class="svc-loc-card">
+          <div class="slc-flag">🏔️</div>
+          <div class="slc-city">Balikpapan</div>
+          <div class="slc-country">Kalimantan Timur</div>
+          <span class="slc-badge">Service Center</span>
+        </div>
+        <div class="svc-loc-card">
+          <div class="slc-flag">🌺</div>
+          <div class="slc-city">Denpasar</div>
+          <div class="slc-country">Bali</div>
+          <span class="slc-badge">Service Center</span>
         </div>
       </div>
     </div><!-- /world-map-wrap -->
 
-    <!-- Global presence numbers -->
+    <!-- Indonesia coverage numbers -->
     <div class="global-strip fade-up">
       <div class="gs-item">
-        <span class="gs-num" data-count="150" data-suffix="+">150+</span>
-        <span class="gs-label">Countries &amp; Regions Covered</span>
+        <span class="gs-num" data-count="300" data-suffix="+">300+</span>
+        <span class="gs-label">Kota &amp; Kabupaten Terlayani</span>
       </div>
       <div class="gs-item">
-        <span class="gs-num" data-count="5" data-suffix="+">5+</span>
-        <span class="gs-label">Overseas Service Bases</span>
+        <span class="gs-num" data-count="6" data-suffix="">6</span>
+        <span class="gs-label">Pusat Layanan Regional</span>
       </div>
       <div class="gs-item">
-        <span class="gs-num" data-count="24" data-suffix="/7">24/7</span>
-        <span class="gs-label">Online Support Available</span>
+        <span class="gs-num">24/7</span>
+        <span class="gs-label">Dukungan Online Tersedia</span>
       </div>
       <div class="gs-item">
         <span class="gs-num" data-count="2" data-suffix="h">2h</span>
-        <span class="gs-label">Quick Response Commitment</span>
+        <span class="gs-label">Komitmen Respon Cepat</span>
       </div>
     </div>
 

@@ -11,34 +11,26 @@
 </head>
 <body>
 
-<!-- ══════════════════════════
-     HEADER
-══════════════════════════ -->
-<header class="site-header">
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <span class="logo"><img src="Assets/logo.png" alt="LongRun LED Logo">
-    </a>
-
+<!-- ══ HEADER ══ -->
+<header>
+  <nav>
+    <div class="logo"><a href="index.html"><img src="Assets/logo.png" alt="LongRun LED Logo"></a></div>
+   
     <ul class="nav-links">
       <li>
-        <a href="product.html">Products
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
+        <a href="product.html">Products</a>
         <div class="dropdown">
-          <a href="#">Fine Pitch</a>
-          <a href="#">Retail &amp; Commercial</a>
-          <a href="#">Rental &amp; Stage</a>
-          <a href="#">DOOH</a>
-          <a href="#">E-PRO Outdoor COB</a>
-          <a href="#">Creative All-in-One</a>
+          <a href="product.html#fine">Fine Pitch</a>
+          <a href="product.html#commercial">Retail &amp; Commercial</a>
+          <a href="product.html#rental">Rental &amp; Stage</a>
+          <a href="product.html#dooh">DDOH</a>
+          <a href="product.html#outdoor-cob">E-PRO Series Outdoor COB</a>
+          <a href="product.html#allinone">Creative All-in-One Display</a>
         </div>
       </li>
 
       <!-- <li>
-        <a href="cases.html">Cases
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
+        <a href="cases.html">Cases</a>
         <div class="dropdown">
           <a href="#">Rental &amp; Stage</a>
           <a href="#">Indoor Fixed</a>
@@ -48,35 +40,29 @@
           <a href="#">Transportation</a>
         </div>
       </li> -->
-      
+
       <li>
-        <a href="support.html" class="active">Support
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
+        <a href="support.html" class="active">Support</a>
         <div class="dropdown">
-          <a href="#page1">Overseas Service</a>
-          <a href="#page2">Service Systems</a>
-          <a href="#page3">Videos</a>
+          <a href="support.html#overseas-service">Overseas Service</a>
+          <a href="support.html#service-system">Service Systems</a>
+          <a href="support.html#videos">Videos</a>
         </div>
       </li>
       
       <li>
-        <a href="about.html">About Us
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
+        <a href="about.html">About Us</a>
         <div class="dropdown">
-          <a href="#">Company Profile</a>
-          <a href="#">Company Culture</a>
-          <a href="#">Development History</a>
-          <a href="#">R&amp;D and Manufacturing</a>
-          <a href="#">Honor &amp; Certification</a>
+          <a href="about.html#company-profile">Company Profile</a>
+          <a href="about.html#company-culture">Company Culture</a>
+          <a href="about.html#development-history">Development History</a>
+          <a href="about.html#rd-and-manufacturing">R&amp;D and Manufacturing</a>
+          <a href="about.html#honor-and-certification">Honor &amp; Certification</a>
         </div>
       </li>
-      
+
       <li>
-        <a href="contact.html">Contact Us
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
+        <a href="contact.html">Contact Us</a>
         <div class="dropdown">
           <a href="#">Headquarters</a>
           <a href="#">Branches</a>
@@ -87,44 +73,40 @@
     </ul>
 
     <div class="nav-actions">
-      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      <span class="lang-switcher" id="langToggle"></span>
+      <a href="#contact" class="btn-contact">Get a Quote</a>
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </nav>
 
-  <!-- Mobile menu -->
+  <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobileMenu">
-    <div class="mm-item"><a href="product.html" class="mm-trigger" style="display:flex">Products</a></div>
-    <!-- <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">Cases</a></div> -->
-    <div class="mm-item">
-      <button class="mm-trigger">Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="mm-panel">
-        <a href="#page1">Overseas Service</a>
-        <a href="#page2">Service Systems</a>
-        <a href="#page3">Videos</a>
-      </div>
-    </div>
-    <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">About Us</a></div>
-    <div class="mm-item"><a href="#" class="mm-trigger" style="display:flex">Contact Us</a></div>
-    <div class="mm-cta">
-      <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
-    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="product.html">Products</a></li>
+      <!-- <li><a href="cases.html">Cases</a></li> -->
+      <li><a href="support.html">Support</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="#contact" class="btn-contact mobile-cta">Get a Quote</a>
   </div>
 </header>
 
 <!-- ══════════════════════════
      BREADCRUMB
 ══════════════════════════ -->
-<div class="breadcrumb-bar">
+<!-- <div class="breadcrumb-bar">
   <div class="breadcrumb">
     <a href="index.html">Home</a>
     <span class="sep">›</span>
     <span class="current">Support</span>
   </div>
-</div>
+</div> -->
 
 <!-- ══════════════════════════
      HERO BANNER
